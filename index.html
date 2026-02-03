@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For My Beautiful Afifa ❤️</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&family=Cinzel:wght@400;500&family=Playfair+Display:wght@400;500;600&family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div id="loader" class="loader">
+    <div class="loader-spinner"></div>
+    <p>Preparing something special for Afifa... 💖</p>
+  </div>
+
+  <!-- Music Player -->
+  <audio id="bgMusic" loop>
+    <source src="birthday-song.mp3" type="audio/mpeg">
+    Your browser doesn't support audio.
+  </audio>
+  
+  <div class="music-toggle">
+    <button id="musicBtn" onclick="toggleMusic()">🔇</button>
+  </div>
+
+  <div id="heart-container"></div>
+  <div id="fireworks"></div>
+  <div id="confetti-container"></div>
+
+  <!-- Compliment Modal -->
+  <div id="complimentModal" class="compliment-modal">
+    <div class="compliment-content">
+      <span class="close-compliment" onclick="closeCompliment()">&times;</span>
+      <h2 id="complimentTitle">Beautiful Afifa ✨</h2>
+      <p id="complimentText">You're absolutely amazing!</p>
+      <div class="compliment-heart">💖</div>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Page 1 -->
+    <section class="page active">
+      <h1>My Beautiful Girl Afifa 💕</h1>
+      <div class="message-animation">
+        <p class="fancy-text">Happy birthday to you, my Afifa. Many, many happy returns of the day. Cheers to you and your beautiful soul!</p>
+      </div>
+      <p class="instruction"><i class="fas fa-mouse-pointer"></i> Click anywhere for hearts! ✨</p>
+      <button onclick="nextPage()">Open My Heart 💌</button>
+    </section>
+
+    <!-- Page 2 -->
+    <section class="page">
+      <h1>🎂 Happy Birthday 🎂</h1>
+      <div class="message-animation delay-1">
+        <p class="fancy-text">On this day in 2005, you were born—and honestly, the world became more beautiful because of it.</p>
+        <p class="fancy-text">I'm so grateful to the Almighty for sending you to this earth and making you my partner.</p>
+        <p class="fancy-text">Having you in my life is one of my greatest blessings.</p>
+      </div>
+      <button onclick="nextPage()">Next ✨</button>
+    </section>
+
+    <!-- Page 3 -->
+    <section class="page">
+      <h1>Beautiful Beasty 🌟</h1>
+      <div class="message-animation delay-2">
+        <p class="fancy-text">Every picture captures a moment of your amazing beauty that takes my breath away.</p>
+      </div>
+      
+      <div class="photo-grid">
+        <img src="photos/photo1.jpg" alt="Beautiful Afifa" data-compliment="You have so beautiful eyes that always tell me how much you love me">
+        <img src="photos/photo2.jpg" alt="Happy Afifa" data-compliment="You have the hottest figure you know and I crave to touch it every single second">
+        <img src="photos/photo3.jpeg" alt="Gorgeous Afifa" data-compliment="Your elegance always amaze me and make me think how blessed I am to have you!">
+        <img src="photos/photo4.jpg" alt="Lovely Afifa" data-compliment="Your smile always brings peace in my soul and I always love to see how beautiful you are!">
+        <img src="photos/photo5.jpg" alt="Stunning Afifa" data-compliment="The vibe you always bring is so amazing that I wanna experience it for the rest of my life">
+        <img src="photos/photo6.jpg" alt="Perfect Afifa" data-compliment="Your fun moment is my most favourite moment you know! The way you make everything funny is the most sweetest thing!">
+      </div>
+      
+      <p class="instruction"><i class="fas fa-hand-pointer"></i> Click on photos to see my thoughts! ✨</p>
+      <button onclick="nextPage()">Next ➡</button>
+    </section>
+
+    <!-- Page 4 -->
+    <section class="page">
+      <h1>My Heart's Letter 💌</h1>
+      <div class="letter-container">
+        <div class="letter-paper">
+          <div class="letter-content">
+            <div class="letter-text" id="letterText"></div>
+            <div class="cursor"></div>
+          </div>
+          <div class="letter-signature">
+            <p>Forever yours,</p>
+            <p class="signature-name">With all my love ❤️</p>
+          </div>
+        </div>
+        <div class="ink-blot"></div>
+        <div class="wax-seal">💌</div>
+      </div>
+      <button onclick="nextPage()">One More Surprise ❤️</button>
+    </section>
+
+    <!-- Page 5 -->
+    <section class="page">
+      <h1>Forever Yours Afifa 💍</h1>
+      <div class="message-animation delay-3">
+        <p class="fancy-text">Our love grows stronger everyday. Don't worry about anything else. I never get bored of you. Every single second I always crave your presence around me!!</p>
+      </div>
+      
+      <div class="love-meter">
+        <div class="love-bar" id="loveBar"></div>
+      </div>
+      <p class="love-percentage"><strong>100% Forever! ❤️</strong></p>
+      
+      <div class="final-buttons">
+        <button onclick="launchCelebration();" class="celebrate-btn">
+          <i class="fas fa-birthday-cake"></i> Let's Celebrate! 🎉
+        </button>
+        <button onclick="restart()" class="restart-btn">Start Over 🔄</button>
+      </div>
+      <p class="signature">Made with all my love for Afifa</p>
+    </section>
+  </div>
+
+  <!-- Floating Hearts Container -->
+  <div id="floating-hearts"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
