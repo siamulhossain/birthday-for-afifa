@@ -996,4 +996,39 @@ button:active {
   .heart.x-large {
     font-size: 2.5rem;
   }
+
+}
+
+/* ========== MOBILE BACKGROUND FIX ========== */
+/* Fix for mobile gradient not showing */
+@media (max-width: 768px) {
+  body {
+    background-color: #5c0a0a !important;
+    background-image: linear-gradient(135deg, 
+      #1a0101 0%, 
+      #3d0505 25%, 
+      #6d0f0f 50%, 
+      #8a0f1a 75%, 
+      #5c0a0a 100%) !important;
+    background-image: -webkit-linear-gradient(135deg, 
+      #1a0101 0%, 
+      #3d0505 25%, 
+      #6d0f0f 50%, 
+      #8a0f1a 75%, 
+      #5c0a0a 100%) !important;
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 100vh;
+    height: auto;
+  }
+  
+  /* Make sure container has transparent background */
+  .container {
+    background: transparent !important;
+  }
+  
+  /* Make pages transparent */
+  .page {
+    background: transparent !important;
+  }
 }
